@@ -1,38 +1,49 @@
-import React from 'react'
-import './Programs.css'
-import program_1 from '../../assets/program-1.png'
-import program_2 from '../../assets/program-2.png'
-import program_3 from '../../assets/program-3.png'
-import program_icon_1 from '../../assets/program-icon-1.png'
-import program_icon_2 from '../../assets/program-icon-2.png'
-import program_icon_3 from '../../assets/program-icon-3.png'
+import "./Programs.css";
+import service_1 from "../../assets/web-development.jpeg";
+import service_2 from "../../assets/App development.png";
+import service_3 from "../../assets/ui&ux-design.jpeg";
+import service_icon_1 from "../../assets/web-devep icon.png";
+import service_icon_2 from "../../assets/app-dev icon.png";
+import service_icon_3 from "../../assets/ui&ux icon.png";
 
-const Programs = () => {
-  return (
-    <div className='programs'>
+function Services() {
+  const sevicelist = [
+    {
+      img: service_1,
+      descrip: "Web Development",
+      icon: service_icon_1,
+    },
+
+    {
+      img: service_2,
+      descrip: "Mobile App Development",
+      icon: service_icon_2,
+    },
+    {
+      img: service_3,
+      descrip: "UI & UX Design ",
+      icon : service_icon_3
+    }
+  
+  ];
+
+  function Card(props) {
+    return (
       <div className="program">
-        <img src={program_1} alt="" />
+        <img src={props.img} alt="" />
         <div className="caption">
-            <img src={program_icon_1} alt="" />
-            <p>Graduation Degree</p>
+          <img src={props.icon} alt="" />
+          <p>{props.descrip}</p>
         </div>
       </div>
-      <div className="program">
-        <img src={program_2} alt="" />
-        <div className="caption">
-            <img src={program_icon_2} alt="" />
-            <p>Masters Degree</p>
-        </div>
-      </div>
-      <div className="program">
-        <img src={program_3} alt="" />
-        <div className="caption">
-            <img src={program_icon_3} alt="" />
-            <p>Post Graduation</p>
-        </div>
-      </div>
-    </div>
-  )
+    );
+  }
+
+  const serviceElements = sevicelist.map((service, index) => (
+    <Card key={index} {...service} />
+  ));
+
+  return <div className="programs">{serviceElements}</div>;
 }
 
-export default Programs
+export default Services;
