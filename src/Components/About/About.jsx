@@ -21,21 +21,17 @@ const About = ({setPlayState}) => {
         <h3>ABOUT GHUB</h3>
         <h2>Empowering Innovation, Building Tomorrow.</h2>
         <p>
-          Embark on a transformative educational journey with our university's
-          comprehensive education programs. Our cutting-edge curriculum is
-          designed to empower students with the knowledge, skills, and
-          experiences needed to excel in the dynamic field of education.
+          To be a global leader in delivering innovative and transformative tech
+          solutions that empower businesses and communities. We aim to
+          revolutionize the digital landscape through creative and efficient
+          technology, driving growth and ensuring the success of every business
+          we work with.
         </p>
         <p>
-          With a focus on innovation, hands-on learning, and personalized
-          mentorship, our programs prepare aspiring educators to make a
-          meaningful impact in classrooms, schools, and communities.
-        </p>
-        <p>
-          Whether you aspire to become a teacher, administrator, counselor, or
-          educational leader, our diverse range of programs offers the perfect
-          pathway to achieve your goals and unlock your full potential in
-          shaping the future of education.
+          Our goal is to create a world where businesses thrive through
+          seamless, advanced technology and groundbreaking design, fostering
+          global digital transformation and becoming the go-to tech
+          partner for all.
         </p>
       </div>
     </div>

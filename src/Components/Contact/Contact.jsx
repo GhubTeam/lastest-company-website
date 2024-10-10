@@ -36,30 +36,65 @@ const Contact = () => {
 
 
   return (
-    <div className='contact'>
+    <div className="contact">
       <div className="contact-col">
-        <h3>Send us a message <img src={msg_icon} alt="" /></h3>
-        <p>Feel free to reach out through contact form or find our contact information below. Your feedback, questions, and suggestions are important to us as we strive to provide exceptional service to our university community.</p>
+        <h3>
+          Send us a message <img src={msg_icon} alt="" />
+        </h3>
+        <p>
+          Feel free to reach out through our contact form or find our contact
+          details below. Your feedback, questions, and suggestions are important
+          to us as we continuously strive to deliver innovative and exceptional
+          tech solutions. We look forward to partnering with you on your digital
+          journey.
+        </p>
         <ul>
-            <li><img src={mail_icon} alt="" />Contact@GreatStack.dev</li>
-            <li><img src={phone_icon} alt="" />+1 123-456-7890</li>
-            <li><img src={location_icon} alt="" />77 Massachusetts Ave, Cambridge<br/> MA 02139, United States</li>
+          <li>
+            <img src={mail_icon} alt="" />
+            ghub1414@gmail.com
+          </li>
+          <li>
+            <img src={phone_icon} alt="" />
+            07494893933
+          </li>
+          <li>
+            <img src={location_icon} alt="" />
+            71-75 Shelton Street, Covent Garden, London, WC2H 9JQ 
+            <br /> MA 02139, UNITED KINGDOM
+          </li>
         </ul>
       </div>
       <div className="contact-col">
         <form onSubmit={onSubmit}>
-            <label>Your name</label>
-            <input type="text" name='name' placeholder='Enter your name' required/>
-            <label>Phone Number</label>
-            <input type="tel" name='phone' placeholder='Enter your mobile number' required/>
-            <label>Write your messages here</label>
-            <textarea name="message" rows="6" placeholder='Enter your message' required></textarea>
-            <button type='submit' className='btn dark-btn'>Submit now <img src={white_arrow} alt="" /></button>
+          <label>Your name</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+          <label>Phone Number</label>
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Enter your mobile number"
+            required
+          />
+          <label>Write your messages here</label>
+          <textarea
+            name="message"
+            rows="6"
+            placeholder="Enter your message"
+            required
+          ></textarea>
+          <button type="submit" className="btn dark-btn">
+            Submit now <img src={white_arrow} alt="" />
+          </button>
         </form>
         <span>{result}</span>
       </div>
     </div>
-  )
+  );
 }
 
 export default Contact
