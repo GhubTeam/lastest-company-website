@@ -19,9 +19,9 @@ const App = () => {
       <Navbar />
       <Hero />
       <div className="container">
+        <About setPlayState={setPlayState} />
         <Title subTitle="Our Services" title="What We Offer" />
         <Services />
-        <About setPlayState={setPlayState} />
         <Title subTitle="TESTIMONIALS" title="What Our Clients Say" />
         <Testimonials />
         <Title subTitle="Our Team" title="The Team Behind the Innovation" />
