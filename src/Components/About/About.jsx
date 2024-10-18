@@ -1,6 +1,6 @@
 
 import './About.css'
-import about_img from '../../assets/about.png'
+import about_img from '../../assets/Office Wall 3D Logo Mockup.png'
 import play_icon from '../../assets/play-icon.png'
 
 const About = ({setPlayState}) => {

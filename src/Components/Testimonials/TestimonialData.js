@@ -1,12 +1,12 @@
-import user_1 from "../../assets/user-1.png";
+import user_1 from "../../assets/gallery-2.jpg";
 import user_2 from "../../assets/user-2.png";
 import user_3 from "../../assets/user-3.png";
 import user_4 from "../../assets/user-4.png";
 export default [
   {
     img: user_1,
-    name: "James M., Founder of TechInspire ",
-    location: "San Francisco, CA",
+    name: "Chinaza Austin",
+    location: "Abia Nigeria",
     Testimony:
       "Exceptional Web Development! “Working with Ghub Technology has been a seamless experience from start to finish. Their team built us a high-performance, mobile-friendly website that has not only increased our traffic but also improved our customer engagement. Their professionalism and attention to detail are unmatched!",
   },

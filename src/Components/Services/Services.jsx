@@ -1,7 +1,7 @@
 import "./Services.css";
-import service_1 from "../../assets/web-development.jpeg";
-import service_2 from "../../assets/App development.png";
-import service_3 from "../../assets/ui&ux-design.jpeg";
+import service_1 from "../../assets/web_dvp (2).png";
+import service_2 from "../../assets/app dvp.jpg";
+import service_3 from "../../assets/ui_ux_img.jpg";
 import service_icon_1 from "../../assets/web-devep icon.png";
 import service_icon_2 from "../../assets/app-dev icon.png";
 import service_icon_3 from "../../assets/ui&ux icon.png";
@@ -29,8 +29,8 @@ function Services() {
 
   function Card(props) {
     return (
-      <div className="program">
-        <img src={props.img} alt="" />
+      <div className="service">
+        <img src={props.img} alt=""  className=" card-img"/>
         <div className="caption">
           <img src={props.icon} alt="" />
           <p>{props.descrip}</p>
@@ -43,7 +43,7 @@ function Services() {
     <Card key={index} {...service} />
   ));
 
-  return <div className="programs">{serviceElements}</div>;
+  return <div className="services">{serviceElements}</div>;
 }
 
 export default Services;

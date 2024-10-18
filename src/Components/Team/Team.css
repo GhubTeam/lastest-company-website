@@ -1,0 +1,33 @@
+teams{
+    margin: 80px auto;
+    width: 90%;
+    text-align: center;
+}
+.gallery{
+    display: flex;
+    margin-left: 100px;
+    gap: 100px;
+    margin-bottom: 40px;
+}
+.position{
+    color: #04082a;
+}
+.user-info{
+    display: flex;
+    flex-direction: column;
+}
+.team-card img{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px){
+    .gallery{
+        flex-wrap: wrap;
+    }
+   .gallery img{
+        width: 60%;
+        margin-bottom: 25px;
+   }
+}

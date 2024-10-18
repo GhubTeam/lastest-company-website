@@ -1,39 +1,33 @@
-import React from 'react'
+import  { useRef} from 'react'
+import emailjs from "@emailjs/browser";
 import './Contact.css'
 import msg_icon from '../../assets/msg-icon.png'
 import mail_icon from '../../assets/mail-icon.png'
 import phone_icon from '../../assets/phone-icon.png'
 import location_icon from '../../assets/location-icon.png'
-import white_arrow from '../../assets/white-arrow.png'
+// import white_arrow from '../../assets/white-arrow.png'
 
 const Contact = () => {
 
-    const [result, setResult] = React.useState("");
+    const form = useRef();
 
-    const onSubmit = async (event) => {
-      event.preventDefault();
-      setResult("Sending....");
-      const formData = new FormData(event.target);
+    const sendEmail = (e) => {
+      e.preventDefault();
 
-      // ------Enter your web3forms access key below-------
-      
-      formData.append("access_key", "-----Enter your web3forms key----");
-  
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData
-      }).then((res) => res.json());
-  
-      if (res.success) {
-        console.log("Success", res);
-        setResult(res.message);
-        event.target.reset();
-      } else {
-        console.log("Error", res);
-        setResult(res.message);
-      }
+      emailjs
+        .sendForm("service_x3qii7s", "template_f88m78d", form.current, {
+          publicKey: "dwMA-9PZHdtTUnDDp",
+        })
+        .then(
+          () => {
+            console.log("SUCCESS!");
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+      );
+      e.target.reset()
     };
-
 
   return (
     <div className="contact">
@@ -65,33 +59,15 @@ const Contact = () => {
         </ul>
       </div>
       <div className="contact-col">
-        <form onSubmit={onSubmit}>
-          <label>Your name</label>
-          <input
-            type="text"
-            name="name"
-            placeholder="Enter your name"
-            required
-          />
-          <label>Phone Number</label>
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Enter your mobile number"
-            required
-          />
-          <label>Write your messages here</label>
-          <textarea
-            name="message"
-            rows="6"
-            placeholder="Enter your message"
-            required
-          ></textarea>
-          <button type="submit" className="btn dark-btn">
-            Submit now <img src={white_arrow} alt="" />
-          </button>
-        </form>
-        <span>{result}</span>
+      <form ref={form} onSubmit={sendEmail}>
+      <label>Name</label>
+      <input type="text" name="user_name" />
+      <label>Email</label>
+      <input type="email" name="user_email" />
+      <label>Message</label>
+      <textarea name="message" />
+      <button type="submit" className='submit'>Send</button> 
+    </form>
       </div>
     </div>
   );

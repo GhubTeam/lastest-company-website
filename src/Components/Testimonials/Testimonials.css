@@ -12,7 +12,7 @@
     width: 50px;
     border-radius: 50%;
     cursor: pointer;
-    background: #212EA0;
+    background: black;
 }
 .back-btn{
     right: auto;
@@ -54,8 +54,6 @@
 .user-info h3{
     color: #212EA0;
 }
-
-/* ------- media query ------------- */
 @media (max-width: 800px){
     .testimonials{
         padding: 0 40px;

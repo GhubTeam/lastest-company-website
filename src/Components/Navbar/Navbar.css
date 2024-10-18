@@ -1,5 +1,6 @@
-nav{
+nav {
     width: 100%;
+    height: 70px;
     color: #fff;
     padding: 4px 0;
     position: fixed;
@@ -7,60 +8,127 @@ nav{
     left: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; 
     z-index: 10;
 }
-.logo{
 
+.logo {
+    width: 250px;
+    height: auto; 
+    background-color: transparent;
+    margin-left: 20px; 
 }
-nav ul li{
+
+nav ul {
+    margin-right: 20px;
+}
+
+nav ul li {
     display: inline-block;
     list-style: none;
     margin: 5px 20px;
     font-size: 16px;
+    position: relative; 
 }
-.dark-nav{
-    background: #212EA0;
-    transition: 0.5s;
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease-in-out;
 }
-.menu-icon{
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+nav ul li a:hover {
+    color: #ccc; 
+}
+.dark-nav {
+    background: white;
+    color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.menu-icon {
     display: none;
 }
-/* ----- media query ----------- */
 
-@media (max-width: 1000px){
-    .logo{
-        width: 140px;
+@media (max-width: 1000px) {
+    .logo {
+        width: 200px; 
     }
-    nav ul li{
+    nav ul li {
         margin: 10px 15px;
     }
 }
-@media (max-width: 840px){
-    nav{
+
+@media (max-width: 840px) {
+    nav {
         padding: 15px 0;
     }
-    nav ul{
+    nav ul {
         position: fixed;
         top: 0;
         right: 0px;
         bottom: 0;
         background: #212EA0;
-        z-index: -1;
+        z-index: 11;
         width: 200px;
         padding-top: 70px;
-        transition: 0.5s;
+        transition: right 0.5s ease, visibility 0.5s ease;
+        visibility: visible;
     }
-    nav ul li{
+    nav ul li {
         display: block;
         margin: 25px 40px;
     }
-    .menu-icon{
+    .menu-icon {
         display: block;
         width: 30px;
         cursor: pointer;
+        z-index: 12;
     }
-    .hide-mobile-menu{
+    .hide-mobile-menu {
         right: -200px;
+        visibility: hidden;
     }
+
+    .mobile-menu {
+        right: 0;
+        visibility: visible;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    display: none;
+}
+
+.show-overlay {
+    display: block;
 }

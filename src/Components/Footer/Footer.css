@@ -11,7 +11,12 @@
     display: inline-block;
     margin-left: 20px;
 }
-/* ------ media query ---------- */
+.social-icon{
+  margin-right: 50px;
+  margin-top: 10px;
+  display: flex;
+  gap: 20px
+}
 @media (max-width: 600px){
     .footer{
         display: block;
