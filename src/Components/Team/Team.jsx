@@ -18,7 +18,7 @@ const Team = () => {
     },
     {
       name: "Theophilus  Omede",
-      position: "Software Developer ",
+      position: "Brand Manager",
       image:  gallery_3
     }
   ];
