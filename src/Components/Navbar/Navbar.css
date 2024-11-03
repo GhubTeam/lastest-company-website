@@ -107,6 +107,7 @@ nav ul li a:hover {
         width: 30px;
         cursor: pointer;
         z-index: 12;
+
     }
     .hide-mobile-menu {
         right: -200px;

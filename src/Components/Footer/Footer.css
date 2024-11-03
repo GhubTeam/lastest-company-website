@@ -11,11 +11,15 @@
     display: inline-block;
     margin-left: 20px;
 }
-.social-icon{
+.social-icons{
   margin-right: 50px;
   margin-top: 10px;
   display: flex;
   gap: 20px
+}
+.social-icon{
+    width: 30px;
+    height: 20px;
 }
 @media (max-width: 600px){
     .footer{
