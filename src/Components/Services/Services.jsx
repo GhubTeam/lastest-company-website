@@ -43,7 +43,7 @@ function Services() {
     <Card key={index} {...service} />
   ));
 
-  return <div className="services">{serviceElements}</div>;
+  return <div className="services" >{serviceElements}</div>;
 }
 
 export default Services;

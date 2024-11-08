@@ -15,17 +15,18 @@ const App = () => {
   const [playState, setPlayState] = useState(false);
 
   return (
-    <div>
+    <div className="app">
       <Navbar />
       <Hero />
       <div className="container">
         <About setPlayState={setPlayState} />
         <Title subTitle="Our Services" title="What We Offer" />
         <Services />
-        <Title subTitle="TESTIMONIALS" title="What Our Clients Say" />
-        <Testimonials />
+
         <Title subTitle="Our Team" title="The Team Behind the Innovation" />
         <Team />
+        <Title subTitle="TESTIMONIALS" title="What Our Clients Say" />
+        <Testimonials />
         <Title subTitle="Contact Us" title="Get in Touch" />
         <Contact />
         <Footer />

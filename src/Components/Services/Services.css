@@ -54,6 +54,6 @@
         margin: 20px;
     }
     .card-img{
-        width: 400px;
+        width: 100%;
     }
 }

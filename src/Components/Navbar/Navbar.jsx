@@ -40,16 +40,15 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="testimonials" smooth={true} offset={-260} duration={500}>
-            Testimonials
-          </Link>
-        </li>
-        <li>
           <Link to="teams" smooth={true} offset={-260} duration={500}>
             Our Team
           </Link>
         </li>
-
+        <li>
+          <Link to="testimonials" smooth={true} offset={-260} duration={500}>
+            Testimonials
+          </Link>
+        </li>
         <li>
           <Link
             to="contact"

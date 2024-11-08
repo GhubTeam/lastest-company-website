@@ -1,33 +1,108 @@
-teams{
+.teams {
     margin: 80px auto;
-    width: 90%;
+    width: 100%;
     text-align: center;
 }
-.gallery{
+
+.gallery {
     display: flex;
-    margin-left: 100px;
+    margin-left: 60px;
     gap: 100px;
     margin-bottom: 40px;
 }
-.position{
+
+.position {
     color: #04082a;
 }
-.user-info{
+
+.user-info {
     display: flex;
     flex-direction: column;
 }
-.team-card img{
+
+.team-card {
+    position: relative;
+    display: inline-block;
+    text-align: center;
     width: 250px;
     height: 250px;
-    border-radius: 10px;
 }
 
-@media (max-width: 800px){
-    .gallery{
+.team-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.team-card:hover img {
+    transform: scale(1.05); 
+    opacity: 0.7; 
+}
+
+.social-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none; 
+    transition: opacity 0.3s;
+    width: max-content;
+    text-align: center;
+}
+
+.team-card:hover .social-popup {
+    opacity: 1;
+    pointer-events: auto; 
+}
+
+.social-popup a {
+    margin: 0 5px;
+}
+
+.social-popup img {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+}
+
+@media (max-width: 800px) {
+    .gallery {
         flex-wrap: wrap;
+        justify-content: center; 
+        align-items: center; 
+        margin-left: 0;
+        gap: 100px;
     }
-   .gallery img{
+
+    .team-card {
+        width: 60%; 
+    }
+
+    .gallery img {
+        width:100% ;
+        margin-bottom: 15px;
+    }
+    .social-popup {
         width: 60%;
-        margin-bottom: 25px;
-   }
+        height: 30px;
+        padding: 5px; 
+        font-size: 0.8em; 
+    }
+
+    .social-popup img {
+        width: 20px;
+        height: 20px;
+    }
+}
+@media(max-width: 920px){
+    .gallery{
+        position: relative;
+        right: 20px;
+    }
 }

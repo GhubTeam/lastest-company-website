@@ -1,13 +1,13 @@
 
 import './About.css'
-import about_img from '../../assets/Office Wall 3D Logo Mockup.png'
 import play_icon from '../../assets/play-icon.png'
+import aboutImg from "../../assets/Office Wall 3D blue.jpg"
 
 const About = ({setPlayState}) => {
   return (
     <div className="about">
       <div className="about-left">
-        <img src={about_img} alt="" className="about-img" />
+        <img src={aboutImg} alt="" className = "about-img" />
         <img
           src={play_icon}
           alt=""
