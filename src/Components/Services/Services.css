@@ -1,59 +1,99 @@
-.services{
-    margin: 80px auto;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.service img{
-    width: 100%;
-    border-radius: 10px;
-    display: block;
-}
-.service{
-    flex-basis: 31%;
-    position: relative;
-}
-.card-img{
-    width: 200px;
-    height: 300px;
-}
-.caption{
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(0, 15, 152, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: #fff;
-    cursor: pointer;
-    opacity: 0;
-    padding-top: 70%;
-    transition: 0.4s;
-}
-.caption img{
-    width: 60px;
-    margin-bottom: 10px;
-}
-.service:hover .caption{
-    opacity: 1;
-    padding-top: 0;
+/* General styling for the services container */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid for multiple columns */
+  gap: 2rem;
+  padding: 3rem;
+  background-color: #f9f9f9;
+  justify-items: center; /* Centers content in each grid item */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-@media (max-width: 650px){
-    .services{
-        flex-direction: column;
-    }
-    .service{
-        flex-basis: 100%;
-        margin: 20px;
-    }
-    .card-img{
-        width: 100%;
-    }
+/* Individual service card styling */
+.service {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 20px; /* Added bottom margin for better spacing */
+}
+
+.service:hover {
+  transform: translateY(-5px); /* Slight upward shift on hover */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Caption container styling */
+.caption {
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Icon styling within caption */
+.caption img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1rem;
+}
+
+/* Description text styling */
+.caption p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .services {
+    padding: 2rem;
+  }
+
+  .service {
+    max-width: 90%; /* Reduces the width of service cards on small screens */
+  }
+
+  .card-img {
+    height: 180px; /* Reduced height for better image scaling on smaller screens */
+  }
+
+  .caption p {
+    font-size: 1rem; /* Slightly smaller text on mobile for better readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .services {
+    padding: 1.5rem; /* Further reduced padding on very small screens */
+  }
+
+  .service {
+    max-width: 100%; /* Full width service cards for very small screens */
+  }
+
+  .card-img {
+    height: 160px; /* Further reduced image height for very small screens */
+  }
+
+  .caption p {
+    font-size: 0.9rem; /* Smaller font size for mobile screens */
+  }
 }

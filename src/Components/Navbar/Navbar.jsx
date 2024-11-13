@@ -55,7 +55,7 @@ const Navbar = () => {
             smooth={true}
             offset={-260}
             duration={500}
-            className="btn"
+            className= {sticky ? "nav-btn" : "btn"}
           >
             Contact us
           </Link>

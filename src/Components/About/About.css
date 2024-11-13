@@ -1,60 +1,110 @@
-.about{
-    margin: 100px auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-}
-.about-left{
-    flex-basis: 40%;
-    position: relative;
-}
-.about-right{
-    flex-basis: 56%;
-}
-.about-img{
-    width: 100%;
-    border-radius: 10px;
-}
-.play-icon{
-    width: 60px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    cursor: pointer;
-}
-.about h3{
-    font-weight: 600;
-    font-weight: 16px;
-    font-size : 32px;
-    color: #212EA0;
-}
-.about h2{
-   font-size: 20px;
-   color: #000F38;
-   margin: 10px 0;
-   max-width: 400px;
-}
-.about p{
-    color: #676767;
-    margin-bottom: 15px;
+/* About component main container */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 20px;
+  background-color: #f4f4f9;
+  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
 }
 
-@media (max-width: 800px){
-    .about{
-        flex-direction: column;
-    }
-    .about-left{
-        flex-basis: 100%;
-        margin: 20px;
-        order: 2;
-    }
-    .about-right{
-        flex-basis: 100%;
-        
-    }
-    .play-icon{
-        margin-top: 50px;
-    }
+/* About left and right sections */
+.about-left, .about-right {
+  flex: 1;
+  position: relative;
+  max-width: 500px;
+}
+
+/* About image styling */
+.about-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+}
+
+.about-img:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* Darker shadow on hover */
+}
+
+/* Play icon styling */
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.play-icon:hover {
+  transform: translate(-50%, -50%) scale(1.1); /* Slight scaling effect */
+}
+
+/* About text styling */
+.about-right h3 {
+  font-size: 2rem; /* Slightly smaller font size for the subtitle */
+  color: #2e2977; /* Soft gray color */
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.about-right h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-right p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px; /* Adjust padding for smaller screens */
+  }
+
+  .about-left {
+    order: 2; /* This places .about-left under .about-right */
+    max-width: 100%;
+    margin-top: 20px; /* Add space between sections */
+  }
+
+  .about-right {
+    order: 1; /* This places .about-right above .about-left */
+    max-width: 100%;
+  }
+
+  .about-right h2 {
+    font-size: 1.8rem; /* Reduce font size for smaller screens */
+  }
+
+  .about-right p {
+    font-size: 1rem; /* Adjust paragraph font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-right h3 {
+    font-size: 1.5rem; /* Slightly smaller subtitle */
+  }
+
+  .about-right h2 {
+    font-size: 1.4rem; /* Slightly smaller heading for ultra-small screens */
+  }
+
+  .about-right p {
+    font-size: 14px; /* Adjust paragraph size for readability */
+  }
 }

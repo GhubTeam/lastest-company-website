@@ -1,39 +1,39 @@
-import  { useState } from 'react'
-import Navbar from './Components/Navbar/Navbar'
-import Hero from './Components/Hero/Hero'
-import Services from './Components/Services/Services'
-import Title from './Components/Title/Title'
-import About from './Components/About/About'
-import Team from './Components/Team/Team'
-import Testimonials from './Components/Testimonials/Testimonials'
-import Contact from './Components/Contact/Contact'
-import Footer from './Components/Footer/Footer'
-import VideoPlayer from './Components/VideoPlayer/VideoPlayer'
+import { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import MainLayout from "./mainLayout"; 
+import Career from "./pages/career"; 
+import Blog from "./pages/blog"; 
+import Faq from "./pages/Faq"; 
 
 const App = () => {
-
   const [playState, setPlayState] = useState(false);
 
   return (
-    <div className="app">
-      <Navbar />
-      <Hero />
-      <div className="container">
-        <About setPlayState={setPlayState} />
-        <Title subTitle="Our Services" title="What We Offer" />
-        <Services />
-
-        <Title subTitle="Our Team" title="The Team Behind the Innovation" />
-        <Team />
-        <Title subTitle="TESTIMONIALS" title="What Our Clients Say" />
-        <Testimonials />
-        <Title subTitle="Contact Us" title="Get in Touch" />
-        <Contact />
-        <Footer />
-      </div>
-      <VideoPlayer playState={playState} setPlayState={setPlayState} />
-    </div>
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <MainLayout setPlayState={setPlayState} playState={playState} />
+          }
+        />
+        <Route path="/career" element={<Career />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/faq" element={<Faq />} /> 
+        <Route
+          path="*"
+          element={
+            <div>
+              Page not found.{" "}
+              <button onClick={() => (window.location.href = "/")}>
+                Go back to Main Website
+              </button>
+            </div>
+          }
+        />
+      </Routes>
+    </Router>
   );
-}
+};
 
-export default App
+export default App;

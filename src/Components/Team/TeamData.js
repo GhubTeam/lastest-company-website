@@ -5,7 +5,7 @@ import linkedin from "../../assets/linkedin.png";
 import instagram from "../../assets/Instagram Icon.png";
 import twitter from "../../assets/Twitter Icon.png";
 import github from "../../assets/GitHub Icon.png";
-import portfolio from  "../../assets/portfolio.jpeg"
+import portfolio from  "../../assets/web-devep icon.png"
 const teamMembers = [
   {
     name: "Chidiebere Ojingwa",
@@ -49,6 +49,11 @@ const teamMembers = [
         name: "GitHub",
         link: "https://github.com/ojingwaDaniel",
         icon: github,
+      },
+      {
+        name: "Twitter",
+        link: "https://x.com/OjingwaDaniel?t=5RpaF1g8Dk9znI_1wBJm4w&s=08",
+        icon: twitter,
       },
     ],
   },

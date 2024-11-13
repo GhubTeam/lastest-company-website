@@ -1,108 +1,154 @@
+/* General styling for the entire teams container */
 .teams {
-    margin: 80px auto;
-    width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #f4f4f9;
 }
 
+/* Styling for the gallery to manage the grid layout */
 .gallery {
-    display: flex;
-    margin-left: 60px;
-    gap: 100px;
-    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    width: 100%;
 }
 
-.position {
-    color: #04082a;
-}
-
-.user-info {
-    display: flex;
-    flex-direction: column;
-}
-
+/* Styling for individual team cards */
 .team-card {
     position: relative;
-    display: inline-block;
-    text-align: center;
-    width: 250px;
-    height: 250px;
+    overflow: hidden;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    max-width: 240px;
 }
 
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image styling */
 .team-card img {
     width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    transition: transform 0.3s, opacity 0.3s;
+    height: 240px; /* Fixed height to match the max-width of the card */
+    object-fit: cover; /* Ensures image fills the container without distortion */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
-.team-card:hover img {
-    transform: scale(1.05); 
-    opacity: 0.7; 
+/* Styling for user information (name and position) */
+.user-info {
+    padding: 1rem;
+    text-align: center;
 }
 
+.user-info .name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0.5rem 0 0;
+    line-height: 1.2;
+}
+
+.user-info .position {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 0.3rem;
+    line-height: 1.2;
+}
+
+/* Styling for the social media popup */
 .social-popup {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.9); 
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     opacity: 0;
-    pointer-events: none; 
-    transition: opacity 0.3s;
-    width: max-content;
-    text-align: center;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .team-card:hover .social-popup {
     opacity: 1;
-    pointer-events: auto; 
+    visibility: visible;
 }
 
 .social-popup a {
-    margin: 0 5px;
+    margin: 0 0.5rem;
 }
 
 .social-popup img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s;
+}
+
+.social-popup img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .gallery {
+    gap: 1rem; /* Reduced gap for mobile */
+  }
+
+  .team-card {
+    max-width: 90%; /* More flexible card width on smaller screens */
+  }
+
+  .team-card img {
+    height: 200px; /* Slightly smaller image height */
+  }
+
+  .user-info .name {
+    font-size: 1rem; /* Smaller font size for name */
+  }
+
+  .user-info .position {
+    font-size: 0.8rem; /* Smaller font size for position */
+  }
+
+  .social-popup img {
     width: 24px;
-    height: 24px;
-    border-radius: 4px;
+    height: 24px; /* Smaller icons for mobile */
+  }
 }
 
-@media (max-width: 800px) {
-    .gallery {
-        flex-wrap: wrap;
-        justify-content: center; 
-        align-items: center; 
-        margin-left: 0;
-        gap: 100px;
-    }
+@media (max-width: 480px) {
+  .gallery {
+    gap: 0.8rem; /* Even smaller gap for very small screens */
+  }
 
-    .team-card {
-        width: 60%; 
-    }
+  .team-card {
+    max-width: 100%; /* Full width cards on very small screens */
+  }
 
-    .gallery img {
-        width:100% ;
-        margin-bottom: 15px;
-    }
-    .social-popup {
-        width: 60%;
-        height: 30px;
-        padding: 5px; 
-        font-size: 0.8em; 
-    }
+  .team-card img {
+    height: 180px; /* Reduced image height for very small screens */
+  }
 
-    .social-popup img {
-        width: 20px;
-        height: 20px;
-    }
-}
-@media(max-width: 920px){
-    .gallery{
-        position: relative;
-        right: 20px;
-    }
+  .user-info .name {
+    font-size: 0.9rem; /* Adjusted text size for smaller screens */
+  }
+
+  .user-info .position {
+    font-size: 0.75rem; /* Adjusted position font size */
+  }
+
+  .social-popup img {
+    width: 22px;
+    height: 22px; /* Even smaller icons */
+  }
 }
