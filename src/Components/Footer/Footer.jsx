@@ -89,15 +89,6 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a
                 href="https://www.instagram.com/ghub1414/?igsh=YzljYTk1ODg3Zg%3D%3D#"
                 target="_blank"
                 rel="noopener noreferrer"

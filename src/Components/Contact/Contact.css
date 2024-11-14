@@ -1,11 +1,10 @@
-/* Contact component main container */
 .contact {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
   padding: 50px 20px;
   background-color: #f8f8fc;
-  justify-content: center; /* Center content */
+  justify-content: center;
 }
 
 .contact-col {
@@ -14,9 +13,8 @@
   max-width: 500px;
   text-align: left;
 }
-
 .contact-col h3 {
-  font-size: 2rem; /* Adjusted for better readability */
+  font-size: 2rem; 
   color: #007acc;
   display: flex;
   align-items: center;
@@ -31,11 +29,10 @@
   margin-bottom: 20px;
 }
 
-/* Form styling */
 form {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Added gap between form fields */
+  gap: 15px;
 }
 
 form label {
@@ -56,7 +53,7 @@ form input, form textarea {
 }
 
 form input:focus, form textarea:focus {
-  border-color: #007acc; /* Highlight border color on focus */
+  border-color: #007acc; 
   outline: none;
 }
 
@@ -78,19 +75,19 @@ form textarea {
 
 .submit:hover {
   background-color: #005fa3;
-  transform: translateY(-2px); /* Slight lift effect on hover */
+  transform: translateY(-2px); 
 }
 
 .submit:active {
-  transform: translateY(1px); /* Button press effect */
+  transform: translateY(1px);
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
   .contact {
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Gap between sections */
+    gap: 20px; 
   }
 
   .contact-col {
@@ -99,7 +96,7 @@ form textarea {
   }
 
   form label, form input, form textarea, .submit {
-    font-size: 1rem; /* Adjust font size for mobile */
+    font-size: 1rem; 
   }
 
   .submit {

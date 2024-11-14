@@ -5,16 +5,16 @@
 }
 
 .title p {
-  font-size: 2rem; /* Smaller font size for the subtitle */
-  color: #2e2977; /* Soft gray color */
+  font-size: 2rem; 
+  color: #2e2977;
   margin-bottom: 8px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
 
 .title h2 {
-  font-size: 1.5rem; /* Larger font size for the main title */
-  color: #333; /* Darker color for the main title */
+  font-size: 1.5rem; 
+  color: #333;
   margin: 0;
   font-weight: bold;
   text-transform: capitalize;
