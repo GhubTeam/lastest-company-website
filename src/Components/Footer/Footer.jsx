@@ -4,13 +4,14 @@ import "./Footer.css";
 import mail_icon from "../../assets/mail-icon.png";
 import phone_icon from "../../assets/phone-icon.png";
 import location_icon from "../../assets/location-icon.png";
+import logo from "../../assets/logo Blue.png";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-logo">
-          <h3>Ghub Technology</h3>
+          <img src={logo} className="logo" alt="G-HUB Technologies Logo"/>
           <p>Your partner in innovation</p>
           <ul>
             <li>
@@ -28,75 +29,77 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li>
-              <Link to="about" smooth={true} offset={-150} duration={500}>
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link to="service" smooth={true} offset={-260} duration={500}>
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link to="contact" smooth={true} offset={-260} duration={500}>
-                Contact
-              </Link>
-            </li>
-            <li>
-              <NavLink to="/faq">FAQ</NavLink>
-            </li>
-            <li>
-              <NavLink to="/career">Careers</NavLink>
-            </li>
-            <li>
-              <NavLink to="/blog">Blog</NavLink>
-            </li>
-          </ul>
-        </div>
-        <div className="footer-social">
-          <h4>Follow Us</h4>
-          <ul>
-            <li>
-              <a
-                href="https://www.facebook.com/profile.php?id=61567027430131"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Facebook
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://x.com/ghubtechnology"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Twitter
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/company/ghub-technology"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LinkedIn
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/ghub1414/?igsh=YzljYTk1ODg3Zg%3D%3D#"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Instagram
-              </a>
-            </li>
-          </ul>
+        <div className="footer-middle">
+          <div className="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li>
+                <Link to="about" smooth={true} offset={-150} duration={500}>
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="service" smooth={true} offset={-260} duration={500}>
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="contact" smooth={true} offset={-260} duration={500}>
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <NavLink to="/faq">FAQ</NavLink>
+              </li>
+              <li>
+                <NavLink to="/career">Careers</NavLink>
+              </li>
+              <li>
+                <NavLink to="/blog">Blog</NavLink>
+              </li>
+            </ul>
+          </div>
+          <div className="footer-social">
+            <h4>Follow Us</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61567027430131"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://x.com/ghubtechnology"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Twitter
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/ghub-technology"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/ghub1414/?igsh=YzljYTk1ODg3Zg%3D%3D#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div className="footer-bottom">
