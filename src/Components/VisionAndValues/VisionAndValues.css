@@ -1,0 +1,78 @@
+.vision-values {
+  background: #f8f9fa;
+  padding: 50px 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.vision-description {
+  font-size: 1.2rem;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.values-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.value-card {
+  background: #fff;
+  padding: 80px;
+  width : 300px;
+  height : 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.value-title {
+  font-size: 1.5rem;
+  color:#2e2977;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.value-description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .vision-values {
+    padding: 40px 10px;
+  }
+
+  .vision-description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .values-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .vision-values {
+    padding: 30px 10px;
+  }
+
+  .values-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -3,7 +3,7 @@ import Hero from "./Components/Hero/Hero";
 import Services from "./Components/Services/Services";
 import Title from "./Components/Title/Title";
 import About from "./Components/About/About";
-import Team from "./Components/Team/Team";
+import VisionAndValues from "./Components/VisionAndValues/VisionAndValues";
 import Testimonials from "./Components/Testimonials/Testimonials";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
@@ -14,12 +14,15 @@ const MainLayout = ({ setPlayState, playState }) => {
     <>
       <Navbar />
       <Hero />
-          <div className="container">
+      <div className="container">
         <About setPlayState={setPlayState} />
+        <Title
+          subTitle="Our Vision and Values"
+          title="Guided by Principles, Driven by Innovation"
+        />
+        <VisionAndValues />
         <Title subTitle="Our Services" title="What We Offer" />
         <Services />
-        <Title subTitle="Our Team" title="The Team Behind the Innovation" />
-        <Team />
         <Title subTitle="TESTIMONIALS" title="What Our Clients Say" />
         <Testimonials />
         <Title subTitle="Contact Us" title="Want to Start Project ?" />

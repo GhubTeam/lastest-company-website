@@ -35,13 +35,13 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="service" smooth={true} offset={-260} duration={500}>
-            Services
+          <Link to="vision-values" smooth={true} offset={-260} duration={500}>
+            Core Values
           </Link>
         </li>
         <li>
-          <Link to="teams" smooth={true} offset={-260} duration={500}>
-            Our Team
+          <Link to="service" smooth={true} offset={-260} duration={500}>
+            Services
           </Link>
         </li>
         <li>
@@ -55,7 +55,7 @@ const Navbar = () => {
             smooth={true}
             offset={-260}
             duration={500}
-            className= {sticky ? "nav-btn" : "btn"}
+            className={sticky ? "nav-btn" : "btn"}
           >
             Contact us
           </Link>

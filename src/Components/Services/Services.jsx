@@ -2,9 +2,11 @@ import "./Services.css";
 import service_1 from "../../assets/web_dvp (2).png";
 import service_2 from "../../assets/app dvp.jpg";
 import service_3 from "../../assets/ui_ux_img.jpg";
+import service_4 from "../../assets/Tech-consultant.png"
 import service_icon_1 from "../../assets/web-devep icon.png";
 import service_icon_2 from "../../assets/app-dev icon.png";
 import service_icon_3 from "../../assets/ui&ux icon.png";
+import service_icon_4 from "../../assets/tech-consult.png"
 
 function Services() {
   const sevicelist = [
@@ -23,6 +25,11 @@ function Services() {
       img: service_3,
       descrip: "UI & UX Design ",
       icon : service_icon_3
+    },
+     {
+      img: service_4,
+      descrip: "Tech Consultancy ",
+      icon : service_icon_4
     }
   
   ];
