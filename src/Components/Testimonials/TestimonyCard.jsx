@@ -11,6 +11,7 @@ export default function Card(props) {
         </div>
         <p>{props.Testimony}</p>
       </div>
+      
     </li>
   );
 }
