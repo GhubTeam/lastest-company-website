@@ -73,6 +73,7 @@
   }
 
   .values-container {
+    padding-left: 50px;
     grid-template-columns: 1fr;
   }
 }

@@ -90,10 +90,12 @@
   .hero {
     min-height: 50vh; 
     padding: 0 10px;
+  
   }
 
   .hero h1 {
     font-size: 24px; 
+    margin-top: 20px;
   }
 
   .hero p {
