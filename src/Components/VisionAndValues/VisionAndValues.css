@@ -18,18 +18,18 @@
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
   margin-top: 40px;
+  justify-content: center; 
 }
 
 .value-card {
   background: #fff;
   padding: 80px;
-  width : 300px;
-  height : 300px;
+  width: 300px;
+  height: 300px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: left;
-
 }
 
 .value-card:hover {
@@ -39,7 +39,7 @@
 
 .value-title {
   font-size: 1.5rem;
-  color:#2e2977;
+  color: #2e2977;
   margin-bottom: 15px;
   font-weight: 600;
   text-transform: uppercase;
@@ -63,7 +63,8 @@
   }
 
   .values-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr; 
+    justify-items: center; 
   }
 }
 
@@ -73,7 +74,7 @@
   }
 
   .values-container {
-    padding-left: 50px;
     grid-template-columns: 1fr;
+    justify-items: center; 
   }
 }

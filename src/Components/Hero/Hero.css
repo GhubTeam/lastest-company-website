@@ -29,24 +29,31 @@
   margin-bottom: 30px;
   color: #e0e0e0;
 }
+
 .btn {
-  display: inline-flex;
-  align-items: center;
-  background-color: #ffffff;
-  color: #007acc;
-  padding: 12px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: bold;
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 10px 20px; 
+  background-color: #007bff; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  text-decoration: none;
+  text-decoration: none; 
+}
+
+.btn a {
+  display: flex; 
+  align-items: center;
+  gap: 8px; 
+  color: inherit; 
+  text-decoration: none; 
 }
 
 .btn img {
-  margin-left: 8px;
-  width: 18px;
-  height: 18px;
+  width: 16px; 
+  height: auto; 
   transition: transform 0.3s ease;
 }
 
@@ -58,6 +65,17 @@
 .btn:hover img {
   transform: translateX(5px);
 }
+
+@media (max-width: 2480px) {
+  .hero h1 {
+    margin-top: 150px;
+  }
+
+  .btn {
+    margin-bottom: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
     min-height: 60vh;
@@ -67,7 +85,6 @@
 
   .hero h1 {
     font-size: 28px; 
-    margin-bottom: 15px; 
   }
 
   .hero p {
@@ -86,16 +103,16 @@
     margin-left: 6px; 
   }
 }
+
 @media (max-width: 480px) {
   .hero {
     min-height: 50vh; 
     padding: 0 10px;
-  
   }
 
   .hero h1 {
     font-size: 24px; 
-    margin-top: 20px;
+    margin-top: 130px;
   }
 
   .hero p {
@@ -110,5 +127,11 @@
   .btn img {
     width: 14px; 
     height: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero-text {
+    margin-top: 80px;
   }
 }
