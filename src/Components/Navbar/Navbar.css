@@ -11,6 +11,7 @@
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   border-bottom: 1px solid transparent;
+  border-radius: 20px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1000;
   box-shadow: none;
@@ -297,7 +298,7 @@
 @media (max-width: 480px) {
   .navbar-container {
     padding: 0.75rem 1rem; 
-    height: 40px;
+    height: 50px;
   }
 
   
