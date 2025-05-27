@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import "./Navbar.css";
-
 import logo from "../../assets/logo.png";
 
 const Navbar = () => {
@@ -21,7 +20,6 @@ const Navbar = () => {
     setMobileMenu(!mobileMenu);
   };
 
-  // SVG Hamburger Menu Icon Component
   const HamburgerIcon = () => (
     <svg
       width="24"

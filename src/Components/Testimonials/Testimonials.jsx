@@ -46,7 +46,6 @@ const TestimonialCarousel = () => {
           </div>
         </div>
 
-        {/* Arrows outside carousel */}
         <div className="arrows-container">
           <button className="arrow-btn" onClick={prevTestimonial}>
             <BsArrowLeftCircleFill />

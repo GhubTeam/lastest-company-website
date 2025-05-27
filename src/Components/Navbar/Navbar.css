@@ -31,14 +31,14 @@
   cursor: pointer;
  
   object-fit: contain;
-  flex-shrink: 0; /* Prevent logo from shrinking */
+  flex-shrink: 0; 
 }
 
 .navbar__logo:hover {
   transform: scale(1.05);
 }
 
-/* Navigation menu */
+
 .navbar__menu {
   display: flex;
   align-items: center;
@@ -88,7 +88,6 @@
   transform: translateY(-2px);
 }
 
-/* When navbar is sticky, change text color to dark */
 .navbar--sticky .navbar__menu li a {
   color: #333;
   text-shadow: none;
@@ -99,7 +98,7 @@
   background: rgba(255, 215, 0, 0.1);
 }
 
-/* Contact button - Gold styling */
+
 .navbar__contact-btn {
   background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffd700 100%) !important;
   color: #1a1a1a !important;
@@ -137,7 +136,7 @@
   color: #000 !important;
 }
 
-/* Mobile menu icon - Updated for SVG */
+
 .navbar__menu-icon {
   display: none;
   background: transparent;
@@ -153,7 +152,7 @@
   transform: scale(1.1);
 }
 
-/* When sticky, change mobile menu icon hover */
+
 .navbar--sticky .navbar__menu-icon:hover {
   background: rgba(255, 215, 0, 0.1);
 }
@@ -168,20 +167,19 @@
   transform: rotate(90deg);
 }
 
-/* Change SVG stroke color when sticky */
 .navbar--sticky .navbar__menu-icon svg path {
-  stroke: #B8860B; /* Darker gold for sticky state */
+  stroke: #B8860B; 
 }
 
 .navbar__menu-icon:hover svg path {
-  stroke: #FFED4E; /* Lighter gold on hover */
+  stroke: #FFED4E; 
 }
 
 .navbar--sticky .navbar__menu-icon:hover svg path {
-  stroke: #B8860B; /* Keep darker gold on hover when sticky */
+  stroke: #B8860B; 
 }
 
-/* Overlay for mobile menu */
+
 .navbar__overlay {
   position: fixed;
   top: 0;
@@ -203,12 +201,11 @@
 }
 
 
-@media (max-width: 768px) {
+
+@media (max-width: 894px) {
   .navbar-container {
     padding: 0.75rem 1.5rem; 
   }
-
- 
   .navbar__logo {
     height: 42px; 
     width: auto; 
@@ -314,7 +311,6 @@
   }
 }
 
-/* Extra small devices (smaller phones) */
 @media (max-width: 360px) {
   .navbar-container {
     padding: 0.5rem 0.75rem;
@@ -326,7 +322,6 @@
   }
 }
 
-/* Dark mode support */
 @media (prefers-color-scheme: dark) {
   .navbar-container {
     background: rgba(17, 24, 39, 0.95);
@@ -352,11 +347,10 @@
   }
 
   .navbar__menu {
-    background: gold;
+    background: rgb(120, 102, 2);
     border-left: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  /* Dark mode SVG icon styling */
   .navbar__menu-icon svg path {
     stroke: #FFD700;
   }
@@ -366,12 +360,10 @@
   }
 }
 
-/* Smooth scrolling enhancement */
 html {
   scroll-behavior: smooth;
 }
 
-/* Loading animation for navbar */
 @keyframes slideDown {
   from {
     transform: translateY(-100%);
@@ -387,7 +379,6 @@ html {
   animation: slideDown 0.6s ease-out;
 }
 
-/* Accessibility improvements */
 @media (hover: none) {
   .navbar__menu li a:hover {
     transform: none;
