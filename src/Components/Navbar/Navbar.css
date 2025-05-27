@@ -136,10 +136,10 @@
   color: #000 !important;
 }
 
-/* Mobile menu icon */
+/* Mobile menu icon - Updated for SVG */
 .navbar__menu-icon {
   display: none;
-  background: gold;
+  background: transparent;
   border: none;
   cursor: pointer;
   padding: 0.5rem;
@@ -148,25 +148,36 @@
 }
 
 .navbar__menu-icon:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 215, 0, 0.1);
   transform: scale(1.1);
 }
 
 /* When sticky, change mobile menu icon hover */
 .navbar--sticky .navbar__menu-icon:hover {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(255, 215, 0, 0.1);
 }
 
-.navbar__menu-icon img {
+.navbar__menu-icon svg {
   width: 24px;
   height: 24px;
-  transition: transform 0.3s ease;
-  filter: sepia(1) saturate(3) hue-rotate(35deg) brightness(0.8); /* Dark gold color */
+  transition: all 0.3s ease;
 }
 
-/* When sticky, keep the same dark gold color */
-.navbar--sticky .navbar__menu-icon img {
-  filter: sepia(1) saturate(3) hue-rotate(35deg) brightness(0.8);
+.navbar__menu-icon:hover svg {
+  transform: rotate(90deg);
+}
+
+/* Change SVG stroke color when sticky */
+.navbar--sticky .navbar__menu-icon svg path {
+  stroke: #B8860B; /* Darker gold for sticky state */
+}
+
+.navbar__menu-icon:hover svg path {
+  stroke: #FFED4E; /* Lighter gold on hover */
+}
+
+.navbar--sticky .navbar__menu-icon:hover svg path {
+  stroke: #B8860B; /* Keep darker gold on hover when sticky */
 }
 
 /* Overlay for mobile menu */
@@ -286,7 +297,7 @@
 @media (max-width: 480px) {
   .navbar-container {
     padding: 0.75rem 1rem; 
-    height: 20px;
+    height: 40px;
   }
 
   
@@ -343,6 +354,15 @@
     background: gold;
     border-left: 1px solid rgba(255, 255, 255, 0.1);
   }
+
+  /* Dark mode SVG icon styling */
+  .navbar__menu-icon svg path {
+    stroke: #FFD700;
+  }
+
+  .navbar__menu-icon:hover svg path {
+    stroke: #FFED4E;
+  }
 }
 
 /* Smooth scrolling enhancement */
@@ -375,7 +395,12 @@ html {
   .navbar__contact-btn:hover {
     transform: none !important;
   }
+  
+  .navbar__menu-icon:hover svg {
+    transform: none;
+  }
 }
+
 @media (prefers-contrast: high) {
   .navbar-container {
     background: white;
@@ -389,5 +414,9 @@ html {
   .navbar__contact-btn {
     background: #000 !important;
     color: white !important;
+  }
+
+  .navbar__menu-icon svg path {
+    stroke: #000;
   }
 }

@@ -3,7 +3,6 @@ import { Link } from "react-scroll";
 import "./Navbar.css";
 
 import logo from "../../assets/logo.png";
-import menuIcon from "../../assets/menu-icon.png";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
@@ -21,6 +20,25 @@ const Navbar = () => {
   const toggleMenu = () => {
     setMobileMenu(!mobileMenu);
   };
+
+  // SVG Hamburger Menu Icon Component
+  const HamburgerIcon = () => (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3 12H21M3 6H21M3 18H21"
+        stroke="#FFD700"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
 
   return (
     <nav
@@ -48,7 +66,7 @@ const Navbar = () => {
             smooth
             offset={0}
             duration={500}
-            onClick={() => setMobileMenu(false)} 
+            onClick={() => setMobileMenu(false)}
           >
             Home
           </Link>
@@ -59,7 +77,7 @@ const Navbar = () => {
             smooth
             offset={-150}
             duration={500}
-            onClick={() => setMobileMenu(false)} 
+            onClick={() => setMobileMenu(false)}
           >
             About us
           </Link>
@@ -70,7 +88,7 @@ const Navbar = () => {
             smooth
             offset={-260}
             duration={500}
-            onClick={() => setMobileMenu(false)} 
+            onClick={() => setMobileMenu(false)}
           >
             Core Values
           </Link>
@@ -81,7 +99,7 @@ const Navbar = () => {
             smooth
             offset={-260}
             duration={500}
-            onClick={() => setMobileMenu(false)} 
+            onClick={() => setMobileMenu(false)}
           >
             Services
           </Link>
@@ -92,7 +110,7 @@ const Navbar = () => {
             smooth
             offset={-260}
             duration={500}
-            onClick={() => setMobileMenu(false)} 
+            onClick={() => setMobileMenu(false)}
           >
             Testimonials
           </Link>
@@ -118,7 +136,7 @@ const Navbar = () => {
         onClick={toggleMenu}
         aria-label="Toggle menu"
       >
-        <img src={menuIcon} alt="Menu Icon" />
+        <HamburgerIcon />
       </button>
       <div
         className={`navbar__overlay ${
