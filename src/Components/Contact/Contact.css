@@ -1,4 +1,4 @@
-/* Contact Component Styles */
+
 .contact {
   max-width: 1200px;
   margin: 0 auto;
@@ -100,7 +100,7 @@
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
-/* Form Container */
+
 .form-container {
   margin-top: 40px;
   background: white;
@@ -170,7 +170,6 @@
   display: block;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .contact {
     padding: 20px 15px;
