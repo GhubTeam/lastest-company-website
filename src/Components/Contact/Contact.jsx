@@ -1,57 +1,90 @@
-import  { useRef} from 'react'
-import emailjs from "@emailjs/browser";
+import React, { useState } from 'react';
 import './Contact.css'
 import msg_icon from '../../assets/msg-icon.png'
 
 const Contact = () => {
+  const [showForm, setShowForm] = useState(false);
+  const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSeWyJ2jbFqG3wn9I1F8uiFXAT0H6Rn6uoKwVRk5a6BbQ5DyKQ/viewform";
 
-    const form = useRef();
+  const toggleForm = () => {
+    setShowForm(!showForm);
+  };
 
-    const sendEmail = (e) => {
-      e.preventDefault();
-
-      emailjs
-        .sendForm("service_x3qii7s", "template_f88m78d", form.current, {
-          publicKey: "dwMA-9PZHdtTUnDDp",
-        })
-        .then(
-          () => {
-            console.log("SUCCESS!");
-          },
-          (error) => {
-            console.log("FAILED...", error.text);
-          }
-      );
-      e.target.reset()
-    };
+  const openFormInNewTab = () => {
+    window.open(formUrl, '_blank');
+  };
 
   return (
     <div className="contact">
-      <div className="contact-col">
-        <h3>
-          Send us a message <img src={msg_icon} alt="" />
-        </h3>
-        <p>
-          Feel free to reach out through our contact form or find our contact
-          details below. Your feedback, questions, and suggestions are important
-          to us as we continuously strive to deliver innovative and exceptional
-          tech solutions. We look forward to partnering with you on your digital
-          journey.
-        </p>
+      <div className="contact-header">
+        <div className="contact-col">
+          <h3>
+            Send us a message <img src={msg_icon} alt="Message icon" />
+          </h3>
+          <p>
+            Feel free to reach out through our contact form or find our contact
+            details below. Your feedback, questions, and suggestions are important
+            to us as we continuously strive to deliver innovative and exceptional
+            tech solutions. We look forward to partnering with you on your digital
+            journey.
+          </p>
+        </div>
+        
+        <div className="contact-actions">
+          <button 
+            className="btn-primary contact-btn" 
+            onClick={toggleForm}
+          >
+            {showForm ? 'Hide Form' : 'Show Contact Form'}
+          </button>
+          
+          <button 
+            className="btn-secondary contact-btn" 
+            onClick={openFormInNewTab}
+          >
+            Open Form in New Tab
+          </button>
+          
+          <a 
+            href={formUrl} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="btn-link contact-btn"
+          >
+            Direct Link to Form
+          </a>
+        </div>
       </div>
-      <div className="contact-col">
-      <form ref={form} onSubmit={sendEmail}>
-      <label>Name</label>
-      <input type="text" name="user_name" />
-      <label>Email</label>
-      <input type="email" name="user_email" />
-      <label>Message</label>
-      <textarea name="message" />
-      <button type="submit" className='submit'>Send</button> 
-    </form>
-      </div>
+
+      {showForm && (
+        <div className="form-container">
+          <div className="form-header">
+            <h4>Contact Form</h4>
+            <button 
+              className="close-btn" 
+              onClick={toggleForm}
+              aria-label="Close form"
+            >
+              ×
+            </button>
+          </div>
+          <div className="iframe-wrapper">
+            <iframe 
+              src={`${formUrl}?embedded=true`}
+              width="100%" 
+              height="800" 
+              frameBorder="0" 
+              marginHeight="0" 
+              marginWidth="0"
+              title="Contact Form"
+            >
+              Loading contact form...
+            </iframe>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
-export default Contact
+export default Contact;

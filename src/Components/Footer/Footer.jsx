@@ -4,7 +4,7 @@ import "./Footer.css";
 import mail_icon from "../../assets/mail-icon.png";
 import phone_icon from "../../assets/phone-icon.png";
 import location_icon from "../../assets/location-icon.png";
-import logo from "../../assets/logo Blue.png";
+import logo from "../../assets/logo.png";
 
 const Footer = () => {
   return (

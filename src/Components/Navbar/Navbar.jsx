@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import "./Navbar.css";
-import logo from "../../assets/logo Blue.png";
-import menu_icon from "../../assets/menu-icon.png";
 import { Link } from "react-scroll";
+import "./Navbar.css";
+
+import logo from "../../assets/logo.png";
+import menuIcon from "../../assets/menu-icon.png";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
@@ -10,8 +11,9 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      window.scrollY > 50 ? setSticky(true) : setSticky(false);
+      setSticky(window.scrollY > 50);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -21,56 +23,109 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`container ${sticky ? "dark-nav" : ""}`}>
-      <img src={logo} alt="Logo" className="logo" />
-      <ul className={mobileMenu ? "mobile-menu" : "hide-mobile-menu"}>
+    <nav
+      className={`navbar-container ${sticky ? "navbar--sticky" : ""}`}
+      role="navigation"
+      aria-label="Main Navigation"
+    >
+      <img src={logo} alt="Company Logo" className="navbar__logo" />
+      <ul
+        className={`navbar__menu ${
+          mobileMenu ? "navbar__menu--mobile" : "navbar__menu--hidden"
+        }`}
+        onClick={(e) => {
+          if (
+            e.target.classList?.contains?.("navbar__menu") ||
+            e.target.textContent === "×"
+          ) {
+            setMobileMenu(false);
+          }
+        }}
+      >
         <li>
-          <Link to="hero" smooth={true} offset={0} duration={500}>
+          <Link
+            to="hero"
+            smooth
+            offset={0}
+            duration={500}
+            onClick={() => setMobileMenu(false)} 
+          >
             Home
           </Link>
         </li>
         <li>
-          <Link to="about" smooth={true} offset={-150} duration={500}>
+          <Link
+            to="about"
+            smooth
+            offset={-150}
+            duration={500}
+            onClick={() => setMobileMenu(false)} 
+          >
             About us
           </Link>
         </li>
         <li>
-          <Link to="vision-values" smooth={true} offset={-260} duration={500}>
+          <Link
+            to="vision-values"
+            smooth
+            offset={-260}
+            duration={500}
+            onClick={() => setMobileMenu(false)} 
+          >
             Core Values
           </Link>
         </li>
         <li>
-          <Link to="service" smooth={true} offset={-260} duration={500}>
+          <Link
+            to="service"
+            smooth
+            offset={-260}
+            duration={500}
+            onClick={() => setMobileMenu(false)} 
+          >
             Services
           </Link>
         </li>
         <li>
-          <Link to="testimonials" smooth={true} offset={-260} duration={500}>
+          <Link
+            to="Testimonials"
+            smooth
+            offset={-260}
+            duration={500}
+            onClick={() => setMobileMenu(false)} 
+          >
             Testimonials
           </Link>
         </li>
         <li>
           <Link
             to="contact"
-            smooth={true}
+            smooth
             offset={-260}
             duration={500}
-            className={sticky ? "nav-btn" : "btn"}
+            className={`navbar__contact-btn ${
+              sticky ? "navbar__contact-btn--sticky" : ""
+            }`}
+            onClick={() => setMobileMenu(false)}
           >
             Contact us
           </Link>
         </li>
       </ul>
-      <img
-        src={menu_icon}
-        alt="Menu Icon"
-        className="menu-icon"
+
+      <button
+        className="navbar__menu-icon"
+        onClick={toggleMenu}
+        aria-label="Toggle menu"
+      >
+        <img src={menuIcon} alt="Menu Icon" />
+      </button>
+      <div
+        className={`navbar__overlay ${
+          mobileMenu ? "navbar__overlay--visible" : ""
+        }`}
         onClick={toggleMenu}
       />
-      <div
-        className={`overlay ${mobileMenu ? "show-overlay" : ""}`}
-        onClick={toggleMenu}
-      ></div>
     </nav>
   );
 };

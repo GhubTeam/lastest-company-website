@@ -18,7 +18,7 @@ const About = ({setPlayState}) => {
         />
       </div>
       <div className="about-right">
-        <h3>ABOUT GHUB</h3>
+        <h3>ABOUT <span className = "orange-text">GHUB</span> </h3>
         <h2>Empowering Innovation, Building Tomorrow.</h2>
         <p>
           To be a global leader in delivering innovative and transformative tech

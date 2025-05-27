@@ -2,26 +2,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(135deg, #685d44, #2d2929); 
   gap: 40px;
-  padding: 60px 20px;
-  background-color: #f4f4f9;
-  flex-wrap: wrap; 
+  margin: 40px 10px;
+  padding: 70px;
+  border-radius: 20px;
+  flex-wrap: wrap;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
 }
-
-.about-left, .about-right {
+.about-left,
+.about-right {
   flex: 1;
   position: relative;
   max-width: 500px;
 }
+
 .about-img {
   width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  transition: box-shadow 0.3s ease; 
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+
 .about-img:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);  
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  transform: scale(1.03); 
 }
 
 .play-icon {
@@ -32,46 +38,48 @@
   width: 60px;
   height: 60px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .play-icon:hover {
   transform: translate(-50%, -50%) scale(1.1);
+  filter: brightness(1.2);
 }
 
 .about-right h3 {
-  font-size: 2rem;
-  color: #2e2977; 
+  font-size: 2.5rem;
+  color: white;
   margin-bottom: 8px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
 
 .about-right h2 {
-  font-size: 1.5rem;
-  color: #333;
+  font-size: 1.8rem;
+  color: white;
   margin-bottom: 20px;
 }
 
 .about-right p {
-  font-size: 16px;
-  color: #555;
+  font-size: 1rem;
+  color: white;
   line-height: 1.6;
   margin-bottom: 15px;
 }
-
 
 @media (max-width: 768px) {
   .about {
     flex-direction: column;
     text-align: center;
-    padding: 40px 20px; 
+    padding: 20px;
+    margin: 10px;
+  
   }
 
   .about-left {
-    order: 2; 
+    order: 2;
     max-width: 100%;
-    margin-top: 20px; 
+    margin-top: 30px; 
   }
 
   .about-right {
@@ -79,25 +87,44 @@
     max-width: 100%;
   }
 
+  .about-right h3 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem); 
+    letter-spacing: 1px; 
+  }
+
   .about-right h2 {
-    font-size: 1.8rem;
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
   }
 
   .about-right p {
-    font-size: 1rem; 
+    font-size: clamp(0.9rem, 3vw, 1rem);
+  }
+
+  .play-icon {
+    width: 50px;
+    height: 50px;
   }
 }
 
 @media (max-width: 480px) {
   .about-right h3 {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 5vw, 1.4rem);
   }
 
   .about-right h2 {
-    font-size: 1.4rem; 
+    font-size: clamp(1.3rem, 4vw, 1.5rem);
   }
 
   .about-right p {
-    font-size: 14px;
+    font-size: clamp(0.8rem, 3vw, 1rem);
+  }
+
+  .about-img {
+    max-width: 100%;
+  }
+
+  .play-icon {
+    width: 40px;
+    height: 40px;
   }
 }

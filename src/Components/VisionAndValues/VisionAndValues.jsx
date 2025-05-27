@@ -30,13 +30,13 @@ const VisionAndValues = () => {
   return (
     <section className="vision-values">
       <p className="vision-description">
-        At Ghub Technology, we are driven by our vision to transform businesses
+        At <span className = "orange-text bigger-text"> Ghub Technology</span>, we are driven by our vision to transform businesses
         through technology, guided by core values that define who we are.
       </p>
       <div className="values-container">
         {values.map((value) => (
           <div className="value-card" key={value.id}>
-            <h3 className="value-title">{value.title}</h3>
+            <h3 className="value-title orange-text">{value.title}</h3>
             <p className="value-description">{value.description}</p>
           </div>
         ))}

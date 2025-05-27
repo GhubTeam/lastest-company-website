@@ -1,51 +1,63 @@
-import { useRef } from "react";
-import "./Testimonials.css";
-import next_icon from "../../assets/next-icon.png";
-import back_icon from "../../assets/back-icon.png";
-import TestimonialData from "./TestimonialData";
-import Card from "./TestimonyCard";
+import  { useState, useEffect } from "react";
+import { BsArrowRightCircleFill, BsArrowLeftCircleFill } from "react-icons/bs";
+import TestimonialData from "./TestimonialData"; 
+import "./Testimonials.css"
 
-const Testimonials = () => {
-  const slider = useRef(null);
-  let tx = 0;
+const TestimonialCarousel = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const slideForward = () => {
-    if (tx > -50) {
-      tx -= 25;
-    }
-    slider.current.style.transform = `translateX(${tx}%)`;
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % TestimonialData.length);
+    }, 5000); 
+    return () => clearInterval(interval); 
+  }, []);
+
+  const nextTestimonial = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % TestimonialData.length);
   };
 
-  const slideBackward = () => {
-    if (tx < 0) {
-      tx += 25;
-    }
-    slider.current.style.transform = `translateX(${tx}%)`;
+  const prevTestimonial = () => {
+    setCurrentIndex(
+      (prevIndex) =>
+        (prevIndex - 1 + TestimonialData.length) % TestimonialData.length
+    );
   };
-
-  const cardElements = TestimonialData.map((testimony) => (
-    <Card key={testimony.name} {...testimony} />
-  ));
 
   return (
-    <div className="testimonials">
-      <img
-        src={next_icon}
-        alt="Next"
-        className="next-btn"
-        onClick={slideForward}
-      />
-      <img
-        src={back_icon}
-        alt="Back"
-        className="back-btn"
-        onClick={slideBackward}
-      />
-      <div className="slider">
-        <ul ref={slider}>{cardElements}</ul>
+    <div className = "Testimonials">
+      <p className="testimony-subtitle">
+        <span className = "orange-text bigger-text"> Real Stories, Real Impact:</span> Hear from Our Satisfied Clients
+      </p>
+      <div className="testimonial-section">
+        <div className="testimonial-carousel">
+          <div className="testimonial-card">
+            <img
+              src={TestimonialData[currentIndex].img}
+              alt={TestimonialData[currentIndex].name}
+              className="testimonial-image"
+            />
+            <div className="testimonial-content">
+              <h3>{TestimonialData[currentIndex].name}</h3>
+              <p className = "location">{TestimonialData[currentIndex].location}</p>
+              <p>{TestimonialData[currentIndex].Testimony}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Arrows outside carousel */}
+        <div className="arrows-container">
+          <button className="arrow-btn" onClick={prevTestimonial}>
+            <BsArrowLeftCircleFill />
+          </button>
+          <button className="arrow-btn" onClick={nextTestimonial}>
+            <BsArrowRightCircleFill />
+          </button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Testimonials;
+export default TestimonialCarousel;

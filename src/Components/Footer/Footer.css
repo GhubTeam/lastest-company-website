@@ -1,9 +1,9 @@
 .footer {
-  background-color: #1e1e1e;
-  color: #f0f0f0;
+  margin-top: 30px;
+  background: rgb(22, 22, 22); 
+  border-radius: 30px;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
-  
 }
 
 .footer-content {
@@ -15,16 +15,18 @@
   gap: 20px;
 }
 
-.footer-logo{
+.footer-logo {
   margin-left: 40px;
 }
 
-.footer-logo .logo{
- margin-left: -50px;
+.footer-logo .logo {
+  margin-left: -50px;
+  width:100px ;
 }
+
 .footer-logo p {
   font-size: 14px;
-  color: #cccccc;
+  color: whitesmoke;
   margin-bottom: 15px;
 }
 
@@ -38,7 +40,7 @@
   display: flex;
   align-items: center;
   font-size: 14px;
-  color: #bbbbbb;
+  color:white;
   margin-bottom: 8px;
 }
 
@@ -51,7 +53,7 @@
 .footer-links h4,
 .footer-social h4 {
   font-size: 18px;
-  color: #00aaff;
+  color:  white;
   margin-bottom: 10px;
 }
 
@@ -69,7 +71,7 @@
 
 .footer-links a,
 .footer-social a {
-  color: #cccccc;
+  color: orange;
   text-decoration: none;
   font-size: 14px;
   transition: color 0.3s ease, transform 0.3s ease;
@@ -86,7 +88,7 @@
   padding-top: 20px;
   text-align: center;
   font-size: 13px;
-  color: #aaaaaa;
+  color: whitesmoke;
   margin-top: 20px;
 }
 
@@ -94,8 +96,8 @@
   display: flex;
   gap: 200px;
   justify-content: space-between;
-  
 }
+
 @media (max-width: 860px) {
   .footer-content {
     flex-direction: column;
@@ -111,11 +113,11 @@
     margin-bottom: 20px;
   }
 
-  
   .footer-middle {
     justify-content: center;
-    gap: 250px; 
+    gap: 250px;
   }
+
   .footer-logo {
     order: 3;
   }
@@ -124,9 +126,11 @@
     width: 200px;
     margin-bottom: 10px;
   }
-  .footer-logo p{
-    margin-top : -30px;
+
+  .footer-logo p {
+    margin-top: -30px;
   }
+
   .footer-logo p,
   .footer-logo li,
   .footer-links li,
@@ -150,24 +154,29 @@
     padding-top: 15px;
   }
 }
+
 @media (max-width: 480px) {
   .footer-middle {
     justify-content: center;
-    gap: 80px; 
+    gap: 80px;
   }
+
   .footer-logo .logo {
     width: 200px;
   }
-.footer-logo p{
-  margin-top : -30px;
-  margin-left: -50px;
-}
+
+  .footer-logo p {
+    margin-top: -30px;
+    margin-left: -50px;
+  }
+
   .footer-logo p,
   .footer-logo li,
   .footer-links li,
   .footer-social li {
     font-size: 12px;
   }
+
   .footer-middle {
     flex-direction: column;
     align-items: center;
