@@ -10,22 +10,24 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <div className="footer-logo">
-          <img src={logo} className="logo" alt="G-HUB Technologies Logo"/>
+        <div className="footer-info">
+          <img src={logo} className="logo" alt="G-HUB Technologies Logo" />
           <p>Your partner in innovation</p>
           <ul>
             <li>
-              <img src={mail_icon} alt="Mail Icon" />
+              <i className="fa-solid fa-envelope"></i>
               ghub1414@gmail.com
             </li>
             <li>
-              <img src={phone_icon} alt="Phone Icon" />
+              <i className="fa-solid fa-phone"></i>
               07494893933
             </li>
             <li>
-              <img src={location_icon} alt="Location Icon" />
-              71-75 Shelton Street, Covent Garden, London, WC2H 9JQ
-              <br /> MA 02139, UNITED KINGDOM
+              <i className="fa-solid fa-location-dot"></i>
+              <address>
+                71-75 Shelton Street, Covent Garden, London, WC2H 9JQ
+                <br /> MA 02139, UNITED KINGDOM
+              </address>
             </li>
           </ul>
         </div>
@@ -68,7 +70,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Facebook
+                  <i className="fa-brands fa-facebook"></i>
                 </a>
               </li>
               <li>
@@ -77,7 +79,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Twitter
+                  <i className="fa-brands fa-twitter"></i>
                 </a>
               </li>
               <li>
@@ -86,7 +88,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  LinkedIn
+                  <i className="fa-brands fa-linkedin"></i>
                 </a>
               </li>
               <li>
@@ -95,7 +97,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Instagram
+                  <i className="fa-brands fa-instagram"></i>
                 </a>
               </li>
             </ul>

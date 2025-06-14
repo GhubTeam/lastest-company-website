@@ -15,7 +15,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color:rgb(205, 155, 26); 
+  background-color:rgb(229, 199, 123); 
   border-radius: 20px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
   overflow: hidden;
@@ -31,7 +31,7 @@
 .service:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
-  background-color: aqua;
+  background-color: rgb(242, 172, 7);
 }
 
 

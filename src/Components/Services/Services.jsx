@@ -1,8 +1,8 @@
 import "./Services.css";
-import service_icon_1 from "../../assets/web-development.png";
-import service_icon_2 from "../../assets/mobile-app-developing-svgrepo-com (1).svg";
-import service_icon_3 from "../../assets/vecteezy_ui-ux-designer-vector-icon-design_20636871.jpg";
-import service_icon_4 from "../../assets/vecteezy_solution-vector-icon-design_20737438.jpg"
+import service_icon_1 from "../../assets/web-dev-icon.png";
+import service_icon_2 from "../../assets/mobile-app-icon.svg";
+import service_icon_3 from "../../assets/ui-ux-icon.jpg";
+import service_icon_4 from "../../assets/consulting-icon.jpg"
 
 function Services() {
   const ServiceList = [

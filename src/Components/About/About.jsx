@@ -1,7 +1,7 @@
 
 import './About.css'
 import play_icon from '../../assets/play-icon.png'
-import aboutImg from "../../assets/Office Wall 3D blue.jpg"
+import aboutImg from "../../assets/office wall.jpg"
 
 const About = ({setPlayState}) => {
   return (

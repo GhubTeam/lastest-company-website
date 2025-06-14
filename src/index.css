@@ -59,7 +59,9 @@ a {
   opacity: 0.8;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
+.white-text{
+  color: white;
+}
 .zoom-out {
   transform: scale(1); 
   opacity: 1; 

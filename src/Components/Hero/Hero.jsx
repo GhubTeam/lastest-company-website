@@ -1,6 +1,6 @@
 import { Link } from "react-scroll";
 import "./Hero.css";
-import dark_arrow from "../../assets/dark-arrow.png";
+import { BsArrowRightCircleFill } from "react-icons/bs";
 
 const Hero = () => {
   return (
@@ -15,7 +15,7 @@ const Hero = () => {
         </p>
         <button className="btn">
           <Link to="service" smooth={true} offset={-260} duration={500}>
-            Explore more <img src={dark_arrow} alt="" />
+            Explore more <BsArrowRightCircleFill />
           </Link>
         </button>
       </div>

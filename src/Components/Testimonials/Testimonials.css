@@ -1,7 +1,7 @@
 
 .Testimonials {
   
-  background: linear-gradient(135deg, #614404, #e6e5e2); 
+  background: linear-gradient(135deg, #eaa613, #e6e5e2); 
   display: flex;
   align-items: center;
   padding: 20px;
@@ -77,7 +77,7 @@
 }
 
 .testimony-subtitle {
-  font-size: 30px;
+  font-size: 34px;
   text-align: center;
   color: #070600; 
   margin-bottom: 20px;
