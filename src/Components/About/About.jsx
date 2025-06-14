@@ -18,8 +18,8 @@ const About = ({setPlayState}) => {
         />
       </div>
       <div className="about-right">
-        <h3>ABOUT <span className = "orange-text">GHUB</span> </h3>
-        <h2>Empowering Innovation, Building Tomorrow.</h2>
+        <h2>ABOUT <span className = "orange-text">GHUB</span> </h2>
+        <h3>Empowering Innovation, Building Tomorrow.</h3>
         <p>
           To be a global leader in delivering innovative and transformative tech
           solutions that empower businesses and communities. We aim to

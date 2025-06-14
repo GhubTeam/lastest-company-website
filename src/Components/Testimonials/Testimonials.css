@@ -66,8 +66,9 @@
   color: #ff6600; 
 }
 
-.testimonial-content p {
+.testimonial-content .testimonial-text {
   font-size: 14px;
+  font-weight: 500;
   color: #555; 
   max-width: 500px;
   margin: 0 auto;
@@ -78,7 +79,7 @@
 .testimony-subtitle {
   font-size: 30px;
   text-align: center;
-  color: #333; 
+  color: #070600; 
   margin-bottom: 20px;
 }
 

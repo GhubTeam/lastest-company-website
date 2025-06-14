@@ -11,7 +11,6 @@
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   border-bottom: 1px solid transparent;
-  border-radius: 20px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1000;
   box-shadow: none;
@@ -25,19 +24,16 @@
 }
 
 .navbar__logo {
-  height: 50px;
-  width:120px;
+  height: 60px;
+  width: 150px;
   transition: transform 0.3s ease;
   cursor: pointer;
- 
-  object-fit: contain;
-  flex-shrink: 0; 
+  flex-shrink: 0;
 }
 
 .navbar__logo:hover {
   transform: scale(1.05);
 }
-
 
 .navbar__menu {
   display: flex;
@@ -55,7 +51,7 @@
 .navbar__menu li a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.95rem;
   padding: 0.75rem 1rem;
   border-radius: 8px;
@@ -67,13 +63,18 @@
 }
 
 .navbar__menu li a::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.2), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 215, 0, 0.2),
+    transparent
+  );
   transition: left 0.6s ease;
   pointer-events: none;
 }
@@ -98,9 +99,13 @@
   background: rgba(255, 215, 0, 0.1);
 }
 
-
 .navbar__contact-btn {
-  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffd700 100%) !important;
+  background: linear-gradient(
+    135deg,
+    #ffd700 0%,
+    #ffed4e 50%,
+    #ffd700 100%
+  ) !important;
   color: #1a1a1a !important;
   padding: 0.75rem 1.5rem !important;
   border-radius: 50px !important;
@@ -113,29 +118,48 @@
 }
 
 .navbar__contact-btn::before {
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent) !important;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  ) !important;
   pointer-events: none;
 }
 
 .navbar__contact-btn:hover {
-  background: linear-gradient(135deg, #ffed4e 0%, #ffd700 50%, #b8860b 100%) !important;
+  background: linear-gradient(
+    135deg,
+    #ffed4e 0%,
+    #ffd700 50%,
+    #b8860b 100%
+  ) !important;
   transform: translateY(-3px) !important;
   box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5) !important;
   color: #000 !important;
 }
 
 .navbar__contact-btn--sticky {
-  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffd700 100%) !important;
+  background: linear-gradient(
+    135deg,
+    #ffd700 0%,
+    #ffed4e 50%,
+    #ffd700 100%
+  ) !important;
   box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
   color: #1a1a1a !important;
 }
 
 .navbar__contact-btn--sticky:hover {
-  background: linear-gradient(135deg, #ffed4e 0%, #ffd700 50%, #b8860b 100%) !important;
+  background: linear-gradient(
+    135deg,
+    #ffed4e 0%,
+    #ffd700 50%,
+    #b8860b 100%
+  ) !important;
   box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5) !important;
   color: #000 !important;
 }
-
 
 .navbar__menu-icon {
   display: none;
@@ -152,7 +176,6 @@
   transform: scale(1.1);
 }
 
-
 .navbar--sticky .navbar__menu-icon:hover {
   background: rgba(255, 215, 0, 0.1);
 }
@@ -168,17 +191,16 @@
 }
 
 .navbar--sticky .navbar__menu-icon svg path {
-  stroke: #B8860B; 
+  stroke: #b8860b;
 }
 
 .navbar__menu-icon:hover svg path {
-  stroke: #FFED4E; 
+  stroke: #ffed4e;
 }
 
 .navbar--sticky .navbar__menu-icon:hover svg path {
-  stroke: #B8860B; 
+  stroke: #b8860b;
 }
-
 
 .navbar__overlay {
   position: fixed;
@@ -200,15 +222,13 @@
   visibility: visible;
 }
 
-
-
 @media (max-width: 894px) {
   .navbar-container {
-    padding: 0.75rem 1.5rem; 
+    padding: 0.75rem 1.5rem;
   }
   .navbar__logo {
-    height: 42px; 
-    width: auto; 
+    height: 42px;
+    width: auto;
     max-width: 140px;
   }
 
@@ -238,7 +258,7 @@
   }
 
   .navbar__menu::before {
-    content: '×';
+    content: "×";
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
@@ -294,15 +314,14 @@
 
 @media (max-width: 480px) {
   .navbar-container {
-    padding: 0.75rem 1rem; 
+    padding: 0.75rem 1rem;
     height: 50px;
   }
 
-  
   .navbar__logo {
-    height: 70px; 
+    height: 70px;
     width: auto;
-    max-width: 120px; 
+    max-width: 120px;
   }
 
   .navbar__menu {
@@ -352,11 +371,11 @@
   }
 
   .navbar__menu-icon svg path {
-    stroke: #FFD700;
+    stroke: #ffd700;
   }
 
   .navbar__menu-icon:hover svg path {
-    stroke: #FFED4E;
+    stroke: #ffed4e;
   }
 }
 
@@ -383,11 +402,11 @@ html {
   .navbar__menu li a:hover {
     transform: none;
   }
-  
+
   .navbar__contact-btn:hover {
     transform: none !important;
   }
-  
+
   .navbar__menu-icon:hover svg {
     transform: none;
   }

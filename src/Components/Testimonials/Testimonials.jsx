@@ -41,7 +41,7 @@ const TestimonialCarousel = () => {
             <div className="testimonial-content">
               <h3>{TestimonialData[currentIndex].name}</h3>
               <p className = "location">{TestimonialData[currentIndex].location}</p>
-              <p>{TestimonialData[currentIndex].Testimony}</p>
+              <p className="testimonial-text">{TestimonialData[currentIndex].Testimony}</p>
             </div>
           </div>
         </div>
