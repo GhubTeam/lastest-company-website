@@ -44,7 +44,10 @@ const Navbar = () => {
       role="navigation"
       aria-label="Main Navigation"
     >
-      <img src={logo} alt="Company Logo" className="navbar__logo" />
+      <Link to="hero" smooth={true} offset={0} duration={500}>
+        <img src={logo} alt="Company Logo" className="navbar__logo" />
+      </Link>
+
       <ul
         className={`navbar__menu ${
           mobileMenu ? "navbar__menu--mobile" : "navbar__menu--hidden"
