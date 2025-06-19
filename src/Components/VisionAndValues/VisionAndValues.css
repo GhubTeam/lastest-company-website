@@ -46,7 +46,7 @@
   color: white;
 }
 
-/* Gold-Themed Backgrounds */
+
 .value-card.mission {
   background: linear-gradient(to bottom, #d4af37, #b99128);
 }
@@ -74,7 +74,6 @@
   color: inherit;
 }
 
-/* Icon wrapper */
 .icon-wrapper {
   width: 80px;
   height: 80px;
@@ -98,7 +97,6 @@
   line-height: 1.5;
 }
 
-/* Values list */
 .value-list {
   list-style: none;
   padding-left: 0;
@@ -112,7 +110,7 @@
   margin-bottom: 8px;
 }
 
-/* Responsive Styles */
+
 @media (max-width: 768px) {
   .vision-values {
     padding: 30px 10px;
