@@ -1,6 +1,6 @@
 
 .Testimonials {
-  background: linear-gradient(135deg, #d4af37, #b99128);
+  background: #413b24;
   display: flex;
   align-items: center;
   padding: 20px;
@@ -59,11 +59,11 @@
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0;
-  color: #333; 
+  color:#765b04 ; 
 }
 .testimonial-content .location {
   text-transform: uppercase;
-  color: #ff6600; 
+  
 }
 
 .testimonial-content .testimonial-text {
@@ -77,9 +77,10 @@
 }
 
 .testimony-subtitle {
-  font-size: 34px;
+  font-size: 40px;
   text-align: center;
-  color: #000000; 
+  color: white; 
+  padding:10px; 
   margin-bottom: 20px;
 }
 
@@ -96,7 +97,7 @@
   background: transparent;
   border: none;
   font-size: 2rem;
-  color: #333; 
+  color: #c0b411; 
   cursor: pointer;
   transition: transform 0.2s ease, color 0.2s ease;
 }
