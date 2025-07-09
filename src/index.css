@@ -44,9 +44,7 @@ a {
   transition: color 0.2s ease;
 }
 
-a:hover {
-  color: var(--accent-color);
-}
+
 
 button {
   background-color: var(--primary-color);

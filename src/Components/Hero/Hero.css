@@ -152,10 +152,13 @@
   left: 100%;
 }
 
-.btn:hover {
+.hero-text .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 35px rgba(255, 107, 53, 0.5);
-  background: linear-gradient(135deg, #E55A2B, #FF6B35);
+  border: 2px solid linear-gradient(135deg, #E55A2B, #FF6B35);
+  background-color: #F8F9FA;
+  color:black;
+  
 }
 
 .btn:active {
