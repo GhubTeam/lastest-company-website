@@ -27,7 +27,7 @@ const TestimonialCarousel = () => {
   return (
     <div className="Testimonials">
       <p className="testimony-subtitle">
-        <span className="white-text bigger-text">
+        <span className="bigger-text">
           Real Stories, Real Impact:
         </span> Hear from Our Satisfied Clients
       </p>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import './Contact.css'
 import msg_icon from '../../assets/msg-icon.png'
 
