@@ -48,7 +48,7 @@ function Services() {
   return (
     <>
       <h2 className="subtitle">Empowering Your Business with    <span className = "orange-text"> Cutting-Edge </span>Digital Solutions</h2>
-      <div className="services">{serviceElements}</div>;
+      <div className="services">{serviceElements}</div>
     </>
   );
 }
