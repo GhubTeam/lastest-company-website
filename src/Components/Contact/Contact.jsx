@@ -23,7 +23,7 @@ const Contact = () => {
           </h3>
           <p>
             Feel free to reach out through our contact form or find our contact
-            details below. Your feedback, questions, and suggestions are important
+            details below. Your feedback, questions and suggestions are important
             to us as we continuously strive to deliver innovative and exceptional
             tech solutions. We look forward to partnering with you on your digital
             journey.
